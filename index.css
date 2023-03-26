@@ -282,7 +282,7 @@ select {
     justify-content: space-between;
     align-items: center;
 }
-
+@media (max-width: 45em) {
 .primary-navigation {
     --gap: clamp(1.5rem, 5vw, 3.5rem);
     --underline-gap: 2rem;
@@ -291,8 +291,20 @@ select {
     margin: 0;
     background: hsl( var(--clr-white) / 0.05);
     backdrop-filter: blur(1.5rem);
-}
+    -webkit-backdrop-filter: blur(1.5rem);
+}}
 
+@media (min-width:45em){
+    .primary-navigation{
+    --gap: clamp(1.5rem, 5vw, 3.5rem);
+    --underline-gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: hsl( var(--clr-white) / 0.06);
+    backdrop-filter: blur(18px);
+    }
+}
 .primary-navigation a {
     text-decoration: none;
 }
